@@ -1,42 +1,49 @@
 'use client'
 
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { AnimatedLink, AnimatedButton } from './animations'
 
 export function Navbar() {
   return (
-    <nav className="fixed top-0 z-50 w-full bg-white border-b border-[#e5e7eb]">
+    <motion.nav 
+      className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-[#e5e7eb]"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+    >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-lg font-bold text-[#0a0a0a]">
           OwnTheSite
         </Link>
         
         <div className="hidden md:flex items-center gap-8">
-          <Link href="#work" className="text-sm text-[#6b7280] hover:text-[#0a0a0a] transition">
+          <AnimatedLink href="#work" className="text-sm text-[#6b7280] hover:text-[#0a0a0a]">
             Work
-          </Link>
-          <Link href="#pricing" className="text-sm text-[#6b7280] hover:text-[#0a0a0a] transition">
+          </AnimatedLink>
+          <AnimatedLink href="#pricing" className="text-sm text-[#6b7280] hover:text-[#0a0a0a]">
             Pricing
-          </Link>
-          <Link href="#contact" className="text-sm text-[#6b7280] hover:text-[#0a0a0a] transition">
+          </AnimatedLink>
+          <AnimatedLink href="#contact" className="text-sm text-[#6b7280] hover:text-[#0a0a0a]">
             Contact
-          </Link>
-          <a 
+          </AnimatedLink>
+          <AnimatedButton 
             href="https://wa.me/message"
-            className="px-6 py-2 bg-[#000000] text-white rounded-full text-sm font-medium hover:opacity-80 transition"
+            className="px-6 py-2 bg-[#000000] text-white rounded-full text-sm font-medium"
           >
             Get a Quote
-          </a>
+          </AnimatedButton>
         </div>
 
         <div className="md:hidden">
-          <a 
+          <AnimatedButton 
             href="https://wa.me/message"
-            className="px-4 py-2 bg-[#000000] text-white rounded-full text-sm font-medium hover:opacity-80 transition"
+            className="px-4 py-2 bg-[#000000] text-white rounded-full text-sm font-medium"
           >
             Get a Quote
-          </a>
+          </AnimatedButton>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   )
 }
