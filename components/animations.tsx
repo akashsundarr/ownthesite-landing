@@ -58,28 +58,29 @@ export function StaggerItem({ children }: { children: ReactNode }) {
 // AnimatedButton - Button with hover effect
 export function AnimatedButton({
   children,
-  href,
+  href = "",
   target,
   rel,
-  className = '',
+  className = "",
   ...props
 }: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  const isExternal = href.startsWith("http");
+
   return (
     <motion.a
       href={href}
-      target={target}
-      rel={rel}
+      target={isExternal ? "_blank" : target}
+      rel={isExternal ? "noopener noreferrer" : rel}
       className={className}
-      whileHover={{ y: -2, boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)' }}
+      whileHover={{ y: -2, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
       whileTap={{ y: 0 }}
       transition={{ duration: 0.2 }}
       {...props}
     >
       {children}
     </motion.a>
-  )
+  );
 }
-
 // AnimatedCard - Card with hover effect
 export function AnimatedCard({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (

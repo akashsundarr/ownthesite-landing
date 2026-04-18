@@ -6,25 +6,31 @@ export function CTASection() {
   return (
     <section id="contact" className="py-20 px-6 bg-white">
       <div className="max-w-3xl mx-auto text-center">
+
+        {/* Heading */}
         <FadeUp>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0a0a0a] mb-4">
-            Get your website live this week
+          <h2 className="text-2xl md:text-3xl font-semibold text-black mb-3">
+            Let’s build your website
           </h2>
         </FadeUp>
+
+        {/* Subtext */}
         <FadeUp delay={0.1}>
-          <p className="text-[#6b7280] mb-12">
-            Tell us about your business and we&apos;ll get back within 24 hours.
+          <p className="text-sm text-gray-500 mb-10">
+            Tell us about your business and we’ll take it from there.
           </p>
         </FadeUp>
 
+        {/* CTA */}
         <FadeUp delay={0.2}>
           <AnimatedButton 
-            href="https://wa.me/message"
-            className="inline-block px-8 py-3 bg-[#000000] text-white rounded-full font-medium"
+            href="https://wa.me/917306063033?text=Hi%20I%20want%20to%20build%20a%20website"
+            className="inline-block px-6 py-3 bg-black text-white rounded-full text-sm font-medium"
           >
-            Get a Quote
+            Get started
           </AnimatedButton>
         </FadeUp>
+
       </div>
     </section>
   )

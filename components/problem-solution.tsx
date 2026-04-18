@@ -1,65 +1,68 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FadeUp, StaggerItem } from './animations'
+import { FadeUp } from './animations'
 
 export function ProblemSolution() {
   const problems = [
-    'Slow Wix or template websites',
-    'Expensive agencies',
-    'Generic designs',
-    'No control over your site'
+    "A template site that looks like everyone else",
+    "Paying for something you don’t control",
+    "A design that doesn’t reflect your business"
   ]
 
   const solutions = [
-    'Fast custom-built websites',
-    'You fully own your site',
-    'Designed for your business',
-    'Built to load fast and rank'
+    "A custom-built website for your business",
+    "Fast, clean, and built to perform",
+    "A website you actually own"
   ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
+      transition: { staggerChildren: 0.08 }
+    }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 16 },
+    visible: { opacity: 1, y: 0 }
   }
 
   return (
-    <section className="py-20 px-6 bg-white">
-      <div className="max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12">
+    <section className="py-24 px-5 sm:px-6 bg-white">
+      <div className="max-w-2xl mx-auto">
+
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+
           {/* Problems */}
           <FadeUp>
-            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-8">The Problem</h2>
-            <motion.ul 
-              className="space-y-4"
+            <h2 className="text-xs sm:text-sm font-medium text-neutral-400 mb-6 uppercase tracking-wider">
+              What you're dealing with
+            </h2>
+
+            <motion.ul
+              className="space-y-4 sm:space-y-5"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-100px' }}
+              viewport={{ once: true }}
             >
               {problems.map((problem, idx) => (
-                <motion.li 
-                  key={idx} 
-                  className="flex items-start gap-4"
+                <motion.li
+                  key={idx}
+                  className="flex items-start gap-3 group"
                   variants={itemVariants}
-                  transition={{ duration: 0.3 }}
                 >
-                  <div className="w-6 h-6 rounded-full bg-[#fafafa] flex items-center justify-center mt-1 flex-shrink-0">
-                    <svg className="w-4 h-4 text-[#6b7280]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-5 h-5 rounded-full bg-neutral-100 flex items-center justify-center mt-0.5 transition group-hover:bg-neutral-200">
+                    <svg className="w-3 h-3 text-neutral-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
-                  <span className="text-[#6b7280]">{problem}</span>
+
+                  <span className="text-sm sm:text-base text-neutral-500 leading-relaxed group-hover:text-neutral-900 transition">
+                    {problem}
+                  </span>
                 </motion.li>
               ))}
             </motion.ul>
@@ -67,31 +70,37 @@ export function ProblemSolution() {
 
           {/* Solutions */}
           <FadeUp delay={0.1}>
-            <h2 className="text-2xl font-bold text-[#0a0a0a] mb-8">Our Solution</h2>
-            <motion.ul 
-              className="space-y-4"
+            <h2 className="text-xs sm:text-sm font-medium text-neutral-400 mb-6 uppercase tracking-wider">
+              What you get instead
+            </h2>
+
+            <motion.ul
+              className="space-y-4 sm:space-y-5"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-100px' }}
+              viewport={{ once: true }}
             >
               {solutions.map((solution, idx) => (
-                <motion.li 
-                  key={idx} 
-                  className="flex items-start gap-4"
+                <motion.li
+                  key={idx}
+                  className="flex items-start gap-3 group"
                   variants={itemVariants}
-                  transition={{ duration: 0.3 }}
                 >
-                  <div className="w-6 h-6 rounded-full bg-[#000000] flex items-center justify-center mt-1 flex-shrink-0">
-                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-5 h-5 rounded-full bg-neutral-900 flex items-center justify-center mt-0.5 transition group-hover:scale-105">
+                    <svg className="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-[#0a0a0a] font-medium">{solution}</span>
+
+                  <span className="text-sm sm:text-base text-neutral-900 font-medium leading-relaxed">
+                    {solution}
+                  </span>
                 </motion.li>
               ))}
             </motion.ul>
           </FadeUp>
+
         </div>
       </div>
     </section>
