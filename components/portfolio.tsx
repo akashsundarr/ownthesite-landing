@@ -22,7 +22,7 @@ export function Portfolio() {
       description:
         "Structured to showcase services clearly and drive direct enquiries",
       tech: ["Next.js", "React", "Tailwind CSS"],
-      url: "https://starwings-website.vercel.app/",
+      url: "https://starwings-journey-redesign.vercel.app/",
     },
     {
       title: "Starwings HVAC",
@@ -30,7 +30,7 @@ export function Portfolio() {
       description:
         "Built to present services professionally and strengthen business credibility",
       tech: ["Next.js", "React", "Tailwind CSS"],
-      url: "https://starwings-journey-redesign.vercel.app/",
+      url: "https://starwings-website.vercel.app/",
     },
   ];
 
