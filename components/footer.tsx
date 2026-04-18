@@ -1,8 +1,19 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { AnimatedLink } from './animations'
+
 export function Footer() {
   return (
     <footer className="bg-[#0a0a0a] text-white py-12 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between">
+        <motion.div 
+          className="flex flex-col md:flex-row items-center justify-between"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="mb-6 md:mb-0">
             <h3 className="text-lg font-bold mb-1">OwnTheSite</h3>
             <p className="text-sm text-gray-400">
@@ -11,17 +22,17 @@ export function Footer() {
           </div>
 
           <div className="flex gap-6">
-            <a href="mailto:hello@ownthesite.com" className="text-sm text-gray-400 hover:text-white transition">
+            <AnimatedLink href="mailto:hello@ownthesite.com" className="text-sm text-gray-400 hover:text-white">
               Email
-            </a>
-            <a href="https://wa.me/message" className="text-sm text-gray-400 hover:text-white transition">
+            </AnimatedLink>
+            <AnimatedLink href="https://wa.me/message" className="text-sm text-gray-400 hover:text-white">
               WhatsApp
-            </a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition">
+            </AnimatedLink>
+            <AnimatedLink href="#" className="text-sm text-gray-400 hover:text-white">
               Twitter
-            </a>
+            </AnimatedLink>
           </div>
-        </div>
+        </motion.div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} OwnTheSite. All rights reserved.</p>
