@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import { FadeUp, StaggerContainer, StaggerItem } from './animations'
 
 export function HowItWorks() {
-  const [hovered, setHovered] = useState<number | null>(null)
   const [paths, setPaths] = useState<string[]>([])
 
   const containerRef = useRef<HTMLDivElement>(null)
@@ -24,7 +23,7 @@ export function HowItWorks() {
       const container = containerRef.current
       const containerRect = container.getBoundingClientRect()
 
-      const newPaths = []
+      const newPaths: string[] = []
 
       for (let i = 0; i < stepRefs.current.length - 1; i++) {
         const a = stepRefs.current[i]
@@ -35,32 +34,25 @@ export function HowItWorks() {
         const rectA = a.getBoundingClientRect()
         const rectB = b.getBoundingClientRect()
 
-        // 1. Calculate centers
         const centerAX = rectA.left + rectA.width / 2 - containerRect.left
         const centerAY = rectA.top + rectA.height / 2 - containerRect.top
 
         const centerBX = rectB.left + rectB.width / 2 - containerRect.left
         const centerBY = rectB.top + rectB.height / 2 - containerRect.top
 
-        // 2. Adjust to start/end at the edges of the 64px (w-16) circles
         const radius = 32
-        const gap = 16 // Gap so the arrow doesn't overlap the circle
-        
-        const startX = centerAX + radius + gap
-        const startY = centerAY
-        
-        const endX = centerBX - radius - gap
-        const endY = centerBY
 
-        // 3. Draw a straight line, then draw the arrow head
-        // The arrow head goes back 12px on X, and up/down 8px on Y
-        const d = `
-          M ${startX} ${startY}
-          L ${endX} ${endY}
-          L ${endX - 12} ${endY - 8}
-          M ${endX} ${endY}
-          L ${endX - 12} ${endY + 8}
-        `
+        // ✅ key fixes
+        const strokeFix = 1.25   // half-ish of stroke width (2.5)
+        const yOffset = -17      // visual centering tweak
+
+        const startX = centerAX + radius - strokeFix
+        const startY = centerAY + yOffset
+
+        const endX = centerBX - radius + strokeFix
+        const endY = centerBY + yOffset
+
+        const d = `M ${startX} ${startY} L ${endX} ${endY}`
 
         newPaths.push(d)
       }
@@ -70,7 +62,7 @@ export function HowItWorks() {
 
     const timeout = setTimeout(updatePaths, 50)
     window.addEventListener('resize', updatePaths)
-    
+
     return () => {
       clearTimeout(timeout)
       window.removeEventListener('resize', updatePaths)
@@ -101,19 +93,21 @@ export function HowItWorks() {
 
             {steps.map((step, idx) => (
               <StaggerItem key={idx}>
-                <div
-                  className="flex flex-col items-center relative z-10"
-                  onMouseEnter={() => setHovered(idx)}
-                  onMouseLeave={() => setHovered(null)}
-                >
+                <div className="flex flex-col items-center relative z-10">
+
                   {/* Circle */}
                   <motion.div
                     ref={(el) => {
                       if (el) stepRefs.current[idx] = el
                     }}
                     className="w-16 h-16 rounded-full bg-black text-white flex items-center justify-center text-xl font-bold mb-6 shadow-xl shadow-gray-900/10"
-                    animate={{ scale: hovered === idx ? 1.08 : 1 }}
-                    transition={{ duration: 0.2 }}
+                    animate={{ scale: [1, 1.08, 1] }}
+                    transition={{
+                      duration: 1.2,
+                      ease: 'easeInOut',
+                      repeat: Infinity,
+                      delay: idx * 0.4
+                    }}
                   >
                     {step.number}
                   </motion.div>
@@ -129,25 +123,47 @@ export function HowItWorks() {
               </StaggerItem>
             ))}
 
-            {/* SVG OVERLAY */}
+            {/* SVG FLOW */}
             <svg className="hidden md:block absolute inset-0 w-full h-full pointer-events-none overflow-visible">
+
+              <defs>
+                <linearGradient id="flowGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="500" y2="0">
+                  <stop offset="0%" stopColor="black" stopOpacity="0" />
+                  <stop offset="45%" stopColor="black" stopOpacity="1" />
+                  <stop offset="55%" stopColor="black" stopOpacity="1" />
+                  <stop offset="100%" stopColor="black" stopOpacity="0" />
+
+                  <animateTransform
+                    attributeName="gradientTransform"
+                    type="translate"
+                    from="-350 0"
+                    to="350 0"
+                    dur="1.6s"
+                    repeatCount="indefinite"
+                  />
+                </linearGradient>
+              </defs>
+
               {paths.map((d, i) => (
-                <motion.path
-                  key={i}
-                  d={d}
-                  stroke="black"
-                  strokeWidth="2.5"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{
-                    pathLength: hovered === i ? 1 : 0,
-                    opacity: hovered === i ? 1 : 0
-                  }}
-                  transition={{ duration: 0.4, ease: 'easeOut' }}
-                />
+                <g key={i}>
+                  <path
+                    d={d}
+                    stroke="black"
+                    strokeWidth="2"
+                    opacity="0.12"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d={d}
+                    stroke="url(#flowGradient)"
+                    strokeWidth="2.5"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
+                </g>
               ))}
+
             </svg>
 
           </div>

@@ -75,9 +75,9 @@ export function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-           <h1 className="text-[15vw] md:text-[10.5rem] font-extrabold tracking-tighter leading-none text-white md:-ml-2">
-             OWNTHESITE.
-           </h1>
+         <h1 className="w-full text-center text-[clamp(3rem,10vw,10.5rem)] font-extrabold tracking-tight leading-none text-white">
+            OWNTHESITE<span>.</span>
+        </h1>
         </motion.div>
 
         {/* Bottom Bar */}
