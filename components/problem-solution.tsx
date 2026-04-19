@@ -1,104 +1,100 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FadeUp } from './animations'
+import { X, Check } from 'lucide-react'
+import { FadeUp, StaggerContainer, StaggerItem } from './animations'
 
 export function ProblemSolution() {
-  const problems = [
-    "A template site that looks like everyone else",
-    "Paying for something you don’t control",
-    "A design that doesn’t reflect your business"
-  ]
-
-  const solutions = [
-    "A custom-built website for your business",
-    "Fast, clean, and built to perform",
-    "A website you actually own"
-  ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.08 }
+  const comparisons = [
+    {
+      problem: "Generic templates that blend in with competitors",
+      solution: "Custom-designed specifically for your brand"
+    },
+    {
+      problem: "Paying monthly subscriptions for a site you don't control",
+      solution: "You pay once, and you own the codebase forever"
+    },
+    {
+      problem: "Bloated platforms that load slowly and hurt SEO",
+      solution: "Clean, modern code built for maximum performance"
     }
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 16 },
-    visible: { opacity: 1, y: 0 }
-  }
+  ]
 
   return (
-    <section className="py-24 px-5 sm:px-6 bg-white">
-      <div className="max-w-2xl mx-auto">
+    <section className="py-28 px-5 sm:px-6 bg-white">
+      <div className="max-w-5xl mx-auto">
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-
-          {/* Problems */}
+        {/* Header */}
+        <div className="mb-16 text-center md:text-left">
           <FadeUp>
-            <h2 className="text-xs sm:text-sm font-medium text-neutral-400 mb-6 uppercase tracking-wider">
-              What you're dealing with
+            <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tighter mb-4">
+              Stop settling for the standard.
             </h2>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <p className="text-lg text-neutral-500 max-w-xl font-medium">
+                  Most websites today rely on templates and subscriptions. We build fast websites that you fully own.
+            </p>
+          </FadeUp>
+        </div>
 
-            <motion.ul
-              className="space-y-4 sm:space-y-5"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {problems.map((problem, idx) => (
-                <motion.li
-                  key={idx}
-                  className="flex items-start gap-3 group"
-                  variants={itemVariants}
-                >
-                  <div className="w-5 h-5 rounded-full bg-neutral-100 flex items-center justify-center mt-0.5 transition group-hover:bg-neutral-200">
-                    <svg className="w-3 h-3 text-neutral-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </div>
+        {/* Comparison Grid */}
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
 
-                  <span className="text-sm sm:text-base text-neutral-500 leading-relaxed group-hover:text-neutral-900 transition">
-                    {problem}
-                  </span>
-                </motion.li>
-              ))}
-            </motion.ul>
+          {/* The Old Way (Problem) */}
+          <FadeUp delay={0.2}>
+            <div className="p-8 md:p-10 rounded-3xl bg-neutral-50 border border-neutral-200 h-full flex flex-col">
+              <h3 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-8">
+                The Old Way
+              </h3>
+              
+              <StaggerContainer delay={0.3}>
+                <ul className="space-y-6 flex-1">
+                  {comparisons.map((item, idx) => (
+                    <StaggerItem key={idx}>
+                      <li className="flex items-start gap-4">
+                        <div className="w-6 h-6 rounded-full bg-neutral-200/60 flex items-center justify-center shrink-0 mt-0.5">
+                          <X className="w-3.5 h-3.5 text-neutral-500" strokeWidth={3} />
+                        </div>
+                        <span className="text-base text-neutral-500 font-medium leading-relaxed">
+                          {item.problem}
+                        </span>
+                      </li>
+                    </StaggerItem>
+                  ))}
+                </ul>
+              </StaggerContainer>
+            </div>
           </FadeUp>
 
-          {/* Solutions */}
-          <FadeUp delay={0.1}>
-            <h2 className="text-xs sm:text-sm font-medium text-neutral-400 mb-6 uppercase tracking-wider">
-              What you get instead
-            </h2>
+          {/* The OwnTheSite Way (Solution) */}
+          <FadeUp delay={0.3}>
+            <div className="p-8 md:p-10 rounded-3xl bg-black text-white shadow-2xl shadow-gray-900/10 h-full flex flex-col relative overflow-hidden">
+              
+              {/* Subtle accent glow */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3" />
 
-            <motion.ul
-              className="space-y-4 sm:space-y-5"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {solutions.map((solution, idx) => (
-                <motion.li
-                  key={idx}
-                  className="flex items-start gap-3 group"
-                  variants={itemVariants}
-                >
-                  <div className="w-5 h-5 rounded-full bg-neutral-900 flex items-center justify-center mt-0.5 transition group-hover:scale-105">
-                    <svg className="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-
-                  <span className="text-sm sm:text-base text-neutral-900 font-medium leading-relaxed">
-                    {solution}
-                  </span>
-                </motion.li>
-              ))}
-            </motion.ul>
+              <h3 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-8 relative z-10">
+                The OwnTheSite Way
+              </h3>
+              
+              <StaggerContainer delay={0.4}>
+                <ul className="space-y-6 flex-1 relative z-10">
+                  {comparisons.map((item, idx) => (
+                    <StaggerItem key={idx}>
+                      <li className="flex items-start gap-4">
+                        <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center shrink-0 mt-0.5">
+                          <Check className="w-3.5 h-3.5 text-black" strokeWidth={3} />
+                        </div>
+                        <span className="text-base text-white font-semibold leading-relaxed">
+                          {item.solution}
+                        </span>
+                      </li>
+                    </StaggerItem>
+                  ))}
+                </ul>
+              </StaggerContainer>
+            </div>
           </FadeUp>
 
         </div>

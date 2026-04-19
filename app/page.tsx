@@ -4,9 +4,9 @@ import { ProblemSolution } from '@/components/problem-solution'
 import { Services } from '@/components/services'
 import { HowItWorks } from '@/components/how-it-works'
 import { Portfolio } from '@/components/portfolio'
-import { Pricing } from '@/components/pricing'
 import { CTASection } from '@/components/cta-section'
 import { Footer } from '@/components/footer'
+import { WorkModel } from '@/components/workmodel'
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
       <ProblemSolution />
       <Services />
       <HowItWorks />
+      <WorkModel />
       <Portfolio />
-      <Pricing />
       <CTASection />
       <Footer />
     </div>

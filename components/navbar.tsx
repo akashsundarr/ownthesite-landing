@@ -23,41 +23,35 @@ export function Navbar() {
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         // The nav itself acts as the floating pill, restoring pointer events
-        className={`pointer-events-auto flex items-center gap-4 px-3 py-2 rounded-full transition-all duration-300 ${
+        className={`pointer-events-auto flex items-center gap-2 sm:gap-4 p-1.5 pl-6 rounded-full transition-all duration-500 ${
           scrolled 
-            ? 'bg-white/80 shadow-lg backdrop-blur-md border border-gray-200' 
-            : 'bg-white/50 backdrop-blur-sm border border-transparent'
+            ? 'bg-white/70 shadow-[0_8px_30px_rgb(0,0,0,0.08)] backdrop-blur-xl border border-neutral-200/80' 
+            : 'bg-white/40 shadow-sm backdrop-blur-md border border-white/50'
         }`}
       >
         {/* Brand Name */}
-        <Link href="/" className="text-sm font-extrabold text-[#0a0a0a] pl-3 pr-1 tracking-tight">
-          Own<span className="font-semibold">TheSite</span>
+        <Link href="/" className="text-base font-extrabold text-black tracking-tighter mr-2 sm:mr-4">
+          Own<span className="text-neutral-400 font-medium tracking-tight">TheSite</span>
         </Link>
 
-        {/* Subtle divider */}
-        <div className="w-px h-4 bg-gray-300 hidden sm:block"></div>
-
-        {/* Navigation Links */}
-        <div className="hidden sm:flex items-center gap-5 text-sm font-medium px-2">
-          <AnimatedLink href="#work" className="text-gray-500 hover:text-black transition-colors">
+        {/* Navigation Links - Wrapped in a subtle inner pill */}
+        <div className="hidden md:flex items-center gap-1 bg-neutral-100/50 rounded-full px-1.5 py-1">
+          <AnimatedLink href="#work" className="px-4 py-1.5 text-sm font-semibold text-neutral-500 hover:text-black transition-colors rounded-full hover:bg-white/80">
             Work
           </AnimatedLink>
-          <AnimatedLink href="#pricing" className="text-gray-500 hover:text-black transition-colors">
+          <AnimatedLink href="#pricing" className="px-4 py-1.5 text-sm font-semibold text-neutral-500 hover:text-black transition-colors rounded-full hover:bg-white/80">
             Pricing
-          </AnimatedLink>
-          <AnimatedLink href="#contact" className="text-gray-500 hover:text-black transition-colors">
-            Contact
           </AnimatedLink>
         </div>
 
         {/* CTA Button */}
         <AnimatedButton
-          href="https://wa.me/917306063033?text=Hi%20I%20want%20to%20build%20a%20website"
-          className="px-5 py-2 bg-black text-white rounded-full text-xs sm:text-sm font-medium hover:bg-gray-800 transition-colors ml-1"
+          href="https://wa.me/917306063033?text=Hi%20Akash,%20I%20want%20to%20discuss%20a%20website%20project"
+          className="px-6 py-2.5 bg-black text-white rounded-full text-xs sm:text-sm font-bold hover:scale-105 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 ml-auto sm:ml-2"
         >
-          Get a Quote
+          Start Project
         </AnimatedButton>
       </motion.nav>
       

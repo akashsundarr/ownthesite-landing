@@ -9,45 +9,54 @@ export function Portfolio() {
 
   const projects = [
     {
-      title: "Premium Ladies Fitness Center",
+      title: "Premium Ladies Fitness",
       category: "Fitness Studio",
+      year: "2024",
       description:
-        "Designed to attract and convert local clients with a clean, focused layout",
-      tech: ["Next.js", "React", "Tailwind CSS"],
+        "Designed to attract and convert local clients with a clean, focused layout.",
+      tech: ["Next.js", "React", "Tailwind"],
       url: "https://www.premiumladiesfitnesscenter.com/",
     },
     {
       title: "Starwings Travel",
       category: "Travel & Tourism",
+      year: "2024",
       description:
-        "Structured to showcase services clearly and drive direct enquiries",
-      tech: ["Next.js", "React", "Tailwind CSS"],
+        "Structured to showcase services clearly and drive direct enquiries.",
+      tech: ["Next.js", "React", "Tailwind"],
       url: "https://starwings-journey-redesign.vercel.app/",
     },
     {
       title: "Starwings HVAC",
-      category: "Engineering Services",
+      category: "Engineering",
+      year: "2023",
       description:
-        "Built to present services professionally and strengthen business credibility",
-      tech: ["Next.js", "React", "Tailwind CSS"],
+        "Built to present services professionally and strengthen business credibility.",
+      tech: ["Next.js", "React", "Tailwind"],
       url: "https://starwings-website.vercel.app/",
     },
   ];
 
   return (
-    <section id="work" className="py-24 px-5 sm:px-6 bg-neutral-50">
-      <div className="max-w-3xl mx-auto">
+    <section id="work" className="py-32 px-5 sm:px-6 bg-[#fafafa]">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="mb-16 text-center">
-          <FadeUp>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900 tracking-tight mb-3">
-              Work
-            </h2>
-          </FadeUp>
-
-          <FadeUp delay={0.1}>
-            <p className="text-sm sm:text-base text-neutral-500 max-w-md mx-auto leading-relaxed">
-              Built for real businesses.
+        <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-neutral-200 pb-10">
+          <div>
+            <FadeUp>
+              <h2 className="text-4xl md:text-6xl font-bold text-black tracking-tighter mb-4">
+                Selected Works
+              </h2>
+            </FadeUp>
+            <FadeUp delay={0.1}>
+              <p className="text-base text-neutral-500 max-w-md">
+                High-performance web applications built for real businesses to drive real results.
+              </p>
+            </FadeUp>
+          </div>
+          <FadeUp delay={0.2}>
+            <p className="text-sm font-medium text-neutral-400 uppercase tracking-widest">
+              2025 — Present
             </p>
           </FadeUp>
         </div>
@@ -55,7 +64,7 @@ export function Portfolio() {
         {/* List */}
         <StaggerContainer delay={0.2}>
           <div
-            className="border-t border-neutral-200"
+            className="flex flex-col"
             onMouseLeave={() => setHoveredIndex(null)}
           >
             {projects.map((project, idx) => {
@@ -69,78 +78,86 @@ export function Portfolio() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block relative border-b border-neutral-200 overflow-hidden"
+                    className="block group relative border-b border-neutral-200 py-10 md:py-14"
                     onMouseEnter={() => setHoveredIndex(idx)}
                   >
-                    {/* Hover Background */}
                     <motion.div
-                      className="absolute inset-0 bg-neutral-100/60 origin-left"
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: isHovered ? 1 : 0 }}
-                      transition={{ duration: 0.4, ease: "easeOut" }}
-                    />
-
-                    <motion.div
-                      className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-5 md:gap-8 py-8 sm:py-10 px-2 sm:px-4"
+                      className="flex flex-col md:flex-row md:items-center justify-between gap-8 w-full"
                       animate={{
-                        opacity: isAnotherHovered ? 0.4 : 1,
-                        x: isHovered ? 8 : 0,
+                        opacity: isAnotherHovered ? 0.3 : 1,
                       }}
-                      transition={{ duration: 0.25 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
                     >
-                      {/* Left */}
-                      <div className="flex-1">
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-neutral-900 mb-2 leading-snug">
+                      {/* Left: Title & Tech */}
+                      <div className="md:w-1/2 flex flex-col justify-center">
+                        <motion.h3
+                          className="text-3xl md:text-5xl font-bold text-black tracking-tight mb-4"
+                          animate={{ x: isHovered ? 12 : 0 }}
+                          transition={{ duration: 0.4, ease: "easeOut" }}
+                        >
                           {project.title}
-                        </h3>
+                        </motion.h3>
 
-                        <p className="text-sm sm:text-base text-neutral-500 max-w-lg leading-relaxed mb-3">
-                          {project.description}
-                        </p>
-
-                        {/* Tech */}
-                        <div className="flex flex-wrap gap-2 overflow-hidden h-7">
-                          <AnimatePresence>
-                            {isHovered &&
-                              project.tech.map((tech, i) => (
-                                <motion.span
-                                  key={tech}
-                                  initial={{ opacity: 0, y: 12 }}
-                                  animate={{ opacity: 1, y: 0 }}
-                                  exit={{ opacity: 0, y: -12 }}
-                                  transition={{
-                                    duration: 0.2,
-                                    delay: i * 0.04,
-                                  }}
-                                  className="px-2.5 py-1 text-xs font-medium text-neutral-600 bg-white border border-neutral-200 rounded-full"
-                                >
-                                  {tech}
-                                </motion.span>
-                              ))}
+                        {/* Tech Stack Reveal */}
+                        <div className="h-8 overflow-hidden">
+                          <AnimatePresence mode="wait">
+                            {isHovered ? (
+                              <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.3 }}
+                                className="flex flex-wrap gap-2"
+                              >
+                                {project.tech.map((tech) => (
+                                  <span
+                                    key={tech}
+                                    className="px-3 py-1 text-xs font-semibold text-neutral-600 bg-white border border-neutral-200 rounded-full"
+                                  >
+                                    {tech}
+                                  </span>
+                                ))}
+                              </motion.div>
+                            ) : (
+                              <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                className="text-sm text-neutral-400 font-medium uppercase tracking-widest"
+                              >
+                                {project.category}
+                              </motion.p>
+                            )}
                           </AnimatePresence>
                         </div>
                       </div>
 
-                      {/* Right */}
-                      <div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-4 mt-3 md:mt-0">
-                        <p className="text-xs sm:text-sm font-medium text-neutral-400 uppercase tracking-wider">
-                          {project.category}
+                      {/* Middle: Description */}
+                      <div className="hidden md:block md:w-1/3">
+                        <p className="text-base text-neutral-500 leading-relaxed">
+                          {project.description}
                         </p>
+                      </div>
 
+                      {/* Right: Year & Arrow */}
+                      <div className="flex items-center justify-between md:justify-end md:w-1/6 gap-6">
+                        <span className="text-sm font-medium text-neutral-400 md:hidden">
+                          {project.year}
+                        </span>
+                        
                         <motion.div
-                          className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-neutral-900 text-white shrink-0"
+                          className="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-neutral-200 text-black shrink-0 shadow-sm"
                           animate={{
-                            scale: isHovered ? 1 : 0.92,
+                            backgroundColor: isHovered ? "#000" : "#fff",
+                            color: isHovered ? "#fff" : "#000",
+                            scale: isHovered ? 1.05 : 1,
                             rotate: isHovered ? -45 : 0,
+                            borderColor: isHovered ? "#000" : "#e5e5e5",
                           }}
-                          transition={{
-                            duration: 0.25,
-                            type: "spring",
-                            stiffness: 280,
-                          }}
+                          transition={{ duration: 0.3 }}
                         >
                           <svg
-                            className="w-4 h-4"
+                            className="w-5 h-5"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
