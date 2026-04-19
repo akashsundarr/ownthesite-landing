@@ -124,47 +124,61 @@ export function HowItWorks() {
             ))}
 
             {/* SVG FLOW */}
-            <svg className="hidden md:block absolute inset-0 w-full h-full pointer-events-none overflow-visible">
+           <svg className="hidden md:block absolute inset-0 w-full h-full pointer-events-none overflow-visible">
+  <defs>
+    <linearGradient 
+      id="flowGradient" 
+      gradientUnits="userSpaceOnUse" 
+      x1="0" y1="0" x2="1000" y2="0" 
+      spreadMethod="repeat" 
+    >
+      {/* The "pulse" of the flow. 
+        It occupies the first 40% of the gradient width.
+        The remaining 60% stays transparent to create a gap between flows.
+      */}
+      <stop offset="0%" stopColor="black" stopOpacity="0" />
+      <stop offset="15%" stopColor="black" stopOpacity="1" />
+      <stop offset="25%" stopColor="black" stopOpacity="1" />
+      <stop offset="40%" stopColor="black" stopOpacity="0" />
 
-              <defs>
-                <linearGradient id="flowGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="500" y2="0">
-                  <stop offset="0%" stopColor="black" stopOpacity="0" />
-                  <stop offset="45%" stopColor="black" stopOpacity="1" />
-                  <stop offset="55%" stopColor="black" stopOpacity="1" />
-                  <stop offset="100%" stopColor="black" stopOpacity="0" />
+      {/* The animation translates exactly from 0 to 1000 (matching x2).
+        Because of spreadMethod="repeat", when it snaps back to 0, 
+        the next repeated tile is already in the exact same visual position, 
+        making the reset completely invisible.
+      */}
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        from="0 0"
+        to="1000 0" 
+        dur="4s"
+        repeatCount="indefinite"
+      />
+    </linearGradient>
+  </defs>
 
-                  <animateTransform
-                    attributeName="gradientTransform"
-                    type="translate"
-                    from="-350 0"
-                    to="350 0"
-                    dur="1.6s"
-                    repeatCount="indefinite"
-                  />
-                </linearGradient>
-              </defs>
-
-              {paths.map((d, i) => (
-                <g key={i}>
-                  <path
-                    d={d}
-                    stroke="black"
-                    strokeWidth="2"
-                    opacity="0.12"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d={d}
-                    stroke="url(#flowGradient)"
-                    strokeWidth="2.5"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </g>
-              ))}
-
-            </svg>
+  {paths.map((d, i) => (
+    <g key={i}>
+      {/* Base static path */}
+      <path
+        d={d}
+        stroke="black"
+        strokeWidth="2"
+        opacity="0.12"
+        fill="none"
+        strokeLinecap="round"
+      />
+      {/* Animated flowing path */}
+      <path
+        d={d}
+        stroke="url(#flowGradient)"
+        strokeWidth="2.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+    </g>
+  ))}
+</svg>
 
           </div>
         </StaggerContainer>
