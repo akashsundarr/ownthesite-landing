@@ -16,7 +16,7 @@ const CheckIcon = ({ className }) => (
 
 export function WorkModel() {
   return (
-    <section id = "pricing" className="py-28 px-6 bg-white">
+    <section id="pricing" className="py-28 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}
@@ -29,7 +29,7 @@ export function WorkModel() {
 
           <FadeUp delay={0.1}>
             <p className="text-base text-gray-500 max-w-md mx-auto">
-              Choose the engagement model that best fits your budget and long-term goals.
+              Pay once for your website. Support is optional, not required.
             </p>
           </FadeUp>
         </div>
@@ -46,13 +46,13 @@ export function WorkModel() {
                   One-Time Build
                 </h3>
                 <p className="text-sm text-gray-500 mt-2 font-medium">
-                  Pay once, own the code forever.
+                  Pay once. Fully yours.
                 </p>
                 
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-extrabold text-black">100%</span>
-                    <span className="text-gray-500 font-medium">upfront fee</span>
+                    <span className="text-4xl font-extrabold text-black">30%</span>
+                    <span className="text-gray-500 font-medium">upfront, 70% on delivery</span>
                   </div>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export function WorkModel() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckIcon className="text-black mt-0.5" />
-                  <span>One-time setup with zero recurring agency fees</span>
+                  <span>No recurring agency fees</span>
                 </li>
               </ul>
 
@@ -79,29 +79,29 @@ export function WorkModel() {
             </div>
           </FadeUp>
 
-          {/* Option 2: Retainer / Subscription */}
+          {/* Option 2: Optional Support */}
           <FadeUp delay={0.1}>
             <div className="relative p-8 md:p-10 rounded-3xl bg-black text-white h-full flex flex-col shadow-2xl shadow-gray-900/20">
 
               {/* Badge */}
               <div className="absolute -top-3.5 left-8">
                 <span className="bg-white text-black text-xs px-4 py-1.5 rounded-full font-bold tracking-wide uppercase">
-                  Recommended
+                  Optional
                 </span>
               </div>
 
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-white tracking-tight">
-                  Ongoing Partnership
+                  Support Plan
                 </h3>
                 <p className="text-sm text-gray-400 mt-2 font-medium">
-                  Lower initial cost + managed support.
+                  Only if you need updates or ongoing help.
                 </p>
 
                 <div className="mt-6 pt-6 border-t border-gray-800">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-extrabold text-white">~60%</span>
-                    <span className="text-gray-400 font-medium">upfront + yearly</span>
+                    <span className="text-4xl font-extrabold text-white">Flexible</span>
+                    <span className="text-gray-400 font-medium">monthly or yearly</span>
                   </div>
                 </div>
               </div>
@@ -109,20 +109,20 @@ export function WorkModel() {
               <ul className="space-y-4 text-gray-300 flex-1">
                 <li className="flex items-start gap-3">
                   <CheckIcon className="text-white mt-0.5" />
-                  <span>Reduced initial build cost</span>
+                  <span>Content updates and small changes</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckIcon className="text-white mt-0.5" />
-                  <span>We handle all hosting, maintenance, and updates</span>
+                  <span>Hosting and deployment support</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckIcon className="text-white mt-0.5" />
-                  <span>Priority support and ongoing feature requests</span>
+                  <span>Priority support when needed</span>
                 </li>
               </ul>
 
               <button className="mt-10 w-full py-3.5 rounded-xl bg-white text-black font-bold hover:bg-gray-100 hover:scale-[1.02] transition-all duration-200">
-                Choose Partnership
+                Choose Support
               </button>
 
             </div>

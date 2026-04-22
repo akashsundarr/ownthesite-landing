@@ -5,37 +5,27 @@ import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 
 export function Services() {
   const items = [
-    { 
-      service: "Business Websites", 
-      audience: "For local service businesses",
-      icon: Wrench
-    },
-    {
-      service: "Service Websites",
-      audience: "For clinics and fitness centers",
-      icon: Activity
-    },
-    { 
-      service: "Landing Pages", 
-      audience: "For travel and tourism businesses",
-      icon: Plane
-    },
-    {
-      service: "Portfolio Websites",
-      audience: "For consultants and freelancers",
-      icon: UserCircle
-    },
-    {
-      service: "Company Profiles",
-      audience: "For shops and showrooms",
-      icon: Store
-    },
-    {
-      service: "Property Listings",
-      audience: "For real estate businesses",
-      icon: Home
-    },
-  ];
+  { 
+    service: "Business Websites", 
+    audience: "For local businesses and service providers",
+    icon: Wrench
+  },
+  {
+    service: "Landing Pages",
+    audience: "For campaigns, tourism, and lead generation",
+    icon: Plane
+  },
+  {
+    service: "Property Listing Websites",
+    audience: "For real estate and property businesses",
+    icon: Home
+  },
+  {
+    service: "Portfolio Websites",
+    audience: "For consultants and freelancers",
+    icon: UserCircle
+  }
+];
 
   return (
     <section className="py-28 px-5 sm:px-6 bg-[#fafafa]">
@@ -60,7 +50,7 @@ export function Services() {
 
         {/* Grid */}
         <StaggerContainer delay={0.2}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {items.map((item, idx) => {
               const Icon = item.icon;
               

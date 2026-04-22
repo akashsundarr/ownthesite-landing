@@ -15,7 +15,7 @@ export function ProblemSolution() {
       solution: "You pay once, and you own the codebase forever"
     },
     {
-      problem: "Bloated platforms that load slowly and hurt SEO",
+      problem: "slow-loading WordPress/Wix sites that lose visitors",
       solution: "Clean, modern code built for maximum performance"
     }
   ]

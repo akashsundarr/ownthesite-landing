@@ -7,6 +7,7 @@ import { Portfolio } from '@/components/portfolio'
 import { CTASection } from '@/components/cta-section'
 import { Footer } from '@/components/footer'
 import { WorkModel } from '@/components/workmodel'
+import  Testimonials  from '@/components/testimonials'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <HowItWorks />
       <WorkModel />
       <Portfolio />
+      <Testimonials />
       <CTASection />
       <Footer />
     </div>

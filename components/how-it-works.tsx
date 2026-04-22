@@ -10,11 +10,28 @@ export function HowItWorks() {
   const containerRef = useRef<HTMLDivElement>(null)
   const stepRefs = useRef<(HTMLDivElement | null)[]>([])
 
-  const steps = [
-    { number: '1', title: 'Tell us what you need', description: 'Share your business goals and project requirements.' },
-    { number: '2', title: 'We build it', description: 'Expertly designed and developed for your specific needs.' },
-    { number: '3', title: 'It’s yours', description: 'Your high-performance website is ready to deploy and use.' }
-  ]
+ const steps = [
+  { 
+    number: '1', 
+    title: 'Share your business details', 
+    description: 'Tell us about your services, goals, and what you need from the website.' 
+  },
+  { 
+    number: '2', 
+    title: 'We design and build (5–10 days)', 
+    description: 'We create a fast, minimal website tailored to your business.' 
+  },
+  { 
+    number: '3', 
+    title: 'Review and approve', 
+    description: 'You check everything, request changes, and approve the final version.' 
+  },
+  { 
+    number: '4', 
+    title: 'Go live and own it', 
+    description: 'Your website is deployed, fully yours, with no platform lock-in.' 
+  }
+];
 
   useEffect(() => {
     const updatePaths = () => {
@@ -71,7 +88,7 @@ export function HowItWorks() {
 
   return (
     <section className="py-28 px-6 bg-[#fafafa]">
-      <div className="max-w-5xl mx-auto text-center relative">
+      <div className="max-w-8xl mx-auto text-center relative">
 
         {/* Header */}
         <div className="mb-24">
@@ -89,7 +106,7 @@ export function HowItWorks() {
         </div>
 
         <StaggerContainer delay={0.2}>
-          <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 relative">
+          <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8 relative">
 
             {steps.map((step, idx) => (
               <StaggerItem key={idx}>

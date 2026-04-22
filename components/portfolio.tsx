@@ -6,36 +6,35 @@ import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 
 export function Portfolio() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  const projects = [
-    {
-      title: "Premium Ladies Fitness",
-      category: "Fitness Studio",
-      year: "2024",
-      description:
-        "Designed to attract and convert local clients with a clean, focused layout.",
-      tech: ["Next.js", "React", "Tailwind"],
-      url: "https://www.premiumladiesfitnesscenter.com/",
-    },
-    {
-      title: "Starwings Travel",
-      category: "Travel & Tourism",
-      year: "2024",
-      description:
-        "Structured to showcase services clearly and drive direct enquiries.",
-      tech: ["Next.js", "React", "Tailwind"],
-      url: "https://starwings-journey-redesign.vercel.app/",
-    },
-    {
-      title: "Starwings HVAC",
-      category: "Engineering",
-      year: "2023",
-      description:
-        "Built to present services professionally and strengthen business credibility.",
-      tech: ["Next.js", "React", "Tailwind"],
-      url: "https://starwings-website.vercel.app/",
-    },
-  ];
+const projects = [
+  {
+    title: "Premium Ladies Fitness",
+    category: "Fitness Studio",
+    year: "2024",
+    description:
+      "Fast-loading website designed to drive local enquiries with a clear, conversion-focused layout.",
+    tech: ["Next.js", "React", "Tailwind"],
+    url: "https://www.premiumladiesfitnesscenter.com/",
+  },
+  {
+    title: "Starwings Travel",
+    category: "Travel & Tourism",
+    year: "2024",
+    description:
+      "Optimized for WhatsApp enquiries with structured service sections and fast performance.",
+    tech: ["Next.js", "React", "Tailwind"],
+    url: "https://starwings-journey-redesign.vercel.app/",
+  },
+  {
+    title: "Starwings HVAC",
+    category: "Engineering",
+    year: "2023",
+    description:
+      "Clean, professional website built to improve trust and clearly present services for better lead clarity.",
+    tech: ["Next.js", "React", "Tailwind"],
+    url: "https://starwings-website.vercel.app/",
+  },
+];
 
   return (
     <section id="work" className="py-32 px-5 sm:px-6 bg-[#fafafa]">

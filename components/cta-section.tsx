@@ -50,7 +50,7 @@ export function CTASection() {
             {/* Trust Indicator / Microcopy */}
             <FadeUp delay={0.3}>
               <p className="mt-6 text-sm text-gray-500 font-medium">
-                Typically replies within a few hours.
+                Reply within a few hours. No obligation.
               </p>
             </FadeUp>
           </div>
