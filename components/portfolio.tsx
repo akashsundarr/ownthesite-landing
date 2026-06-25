@@ -6,35 +6,46 @@ import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 
 export function Portfolio() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-const projects = [
-  {
-    title: "Premium Ladies Fitness",
-    category: "Fitness Studio",
-    year: "2024",
-    description:
-      "Fast-loading website designed to drive local enquiries with a clear, conversion-focused layout.",
-    tech: ["Next.js", "React", "Tailwind"],
-    url: "https://www.premiumladiesfitnesscenter.com/",
-  },
-  {
-    title: "Starwings Travel",
-    category: "Travel & Tourism",
-    year: "2024",
-    description:
-      "Optimized for WhatsApp enquiries with structured service sections and fast performance.",
-    tech: ["Next.js", "React", "Tailwind"],
-    url: "https://starwings-journey-redesign.vercel.app/",
-  },
-  {
-    title: "Starwings HVAC",
-    category: "Engineering",
-    year: "2023",
-    description:
-      "Clean, professional website built to improve trust and clearly present services for better lead clarity.",
-    tech: ["Next.js", "React", "Tailwind"],
-    url: "https://starwings-website.vercel.app/",
-  },
-];
+  const projects = [
+    {
+      title: "Shaheen Flowers",
+      category: "Landscaping & Plants",
+      year: "2025",
+      description:
+        "Professional landscaping website focused on AMC services, indoor plants, outdoor gardens, and lead generation across the UAE.",
+      tech: ["Next.js", "React", "Tailwind"],
+      url: "https://www.shaheenflowers.ae/",
+    },
+    {
+      title: "National Public School",
+      category: "Education",
+      year: "2025",
+      description:
+        "Modern school website focused on admissions, academic information, facilities, and parent communication.",
+      tech: ["Next.js", "React", "Tailwind"],
+      url: "https://www.npskaloor.com/",
+    },
+
+    {
+      title: "Starwings Travel",
+      category: "Travel & Tourism",
+      year: "2024",
+      description:
+        "Optimized for WhatsApp enquiries with structured service sections and fast performance.",
+      tech: ["Next.js", "React", "Tailwind"],
+      url: "https://starwings-journey-redesign.vercel.app/",
+    },
+
+    {
+      title: "Starwings HVAC",
+      category: "Engineering",
+      year: "2023",
+      description:
+        "Clean, professional website built to improve trust and clearly present services for better lead clarity.",
+      tech: ["Next.js", "React", "Tailwind"],
+      url: "https://starwings-website.vercel.app/",
+    },
+  ];
 
   return (
     <section id="work" className="py-32 px-5 sm:px-6 bg-[#fafafa]">
@@ -49,7 +60,8 @@ const projects = [
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="text-base text-neutral-500 max-w-md">
-                High-performance web applications built for real businesses to drive real results.
+                High-performance web applications built for real businesses to
+                drive real results.
               </p>
             </FadeUp>
           </div>
@@ -143,7 +155,7 @@ const projects = [
                         <span className="text-sm font-medium text-neutral-400 md:hidden">
                           {project.year}
                         </span>
-                        
+
                         <motion.div
                           className="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-neutral-200 text-black shrink-0 shadow-sm"
                           animate={{

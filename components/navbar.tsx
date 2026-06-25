@@ -19,15 +19,15 @@ export function Navbar() {
   return (
     // Outer wrapper handles the fixed positioning and perfect centering
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-      
+
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
         // The nav itself acts as the floating pill, restoring pointer events
         className={`pointer-events-auto flex items-center gap-2 sm:gap-4 p-1.5 pl-6 rounded-full transition-all duration-500 ${
-          scrolled 
-            ? 'bg-white/70 shadow-[0_8px_30px_rgb(0,0,0,0.08)] backdrop-blur-xl border border-neutral-200/80' 
+          scrolled
+            ? 'bg-white/70 shadow-[0_8px_30px_rgb(0,0,0,0.08)] backdrop-blur-xl border border-neutral-200/80'
             : 'bg-white/40 shadow-sm backdrop-blur-md border border-white/50'
         }`}
       >
@@ -48,13 +48,13 @@ export function Navbar() {
 
         {/* CTA Button */}
         <AnimatedButton
-          href="https://wa.me/917306063033?text=Hi%20Akash,%20I%20want%20to%20discuss%20a%20website%20project"
+           href="https://wa.me/918075920914?text=Hi%20OwnTheSite%20Team,%20I'd%20like%20to%20start%20a%20website%20project."
           className="px-6 py-2.5 bg-black text-white rounded-full text-xs sm:text-sm font-bold hover:scale-105 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 ml-auto sm:ml-2"
         >
           Start Project
         </AnimatedButton>
       </motion.nav>
-      
+
     </div>
   )
 }
