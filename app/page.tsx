@@ -9,7 +9,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           {/* Subtle Grid Pattern spanning entire page */}
           <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M20 0L40 20L20 40L0 20L20 0z\' fill-opacity=\'0.04\' fill=\'%23147055\' fill-rule=\'evenodd\'/%3E%3C/svg%3E")' }}></div>
-          
+
           {/* Elegant Wavy Blurs to mimic the ribbon */}
           <div className="absolute top-[-25%] right-[-15%] w-[1200px] h-[800px] bg-gradient-to-br from-emerald-100/50 via-teal-50/40 to-transparent blur-3xl rounded-[100%] rotate-[-25deg] transform -scale-x-100 opacity-80"></div>
           <div className="absolute bottom-[-15%] left-[-15%] w-[1000px] h-[600px] bg-gradient-to-tr from-emerald-100/60 via-teal-100/30 to-transparent blur-3xl rounded-[100%] rotate-[20deg] opacity-80"></div>
@@ -17,12 +17,10 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-200/50 text-text-muted-light text-[10px] font-bold uppercase tracking-wider mb-6">
-                Web Design & Development Agency
-              </div>
+              
               <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.05] tracking-tight mb-6 text-[#1c232b]">
                 We Build<br />
                 Custom-Coded<br />
@@ -33,7 +31,7 @@ export default function Home() {
               <p className="text-lg text-text-muted-light mb-10 max-w-md leading-relaxed">
                 Our bespoke, high-performance websites and apps are engineered for conversion, scalability, and market dominance.
               </p>
-              
+
               <div className="flex flex-wrap items-center gap-6 mb-16">
                 <Link
                   className="inline-flex items-center justify-center px-8 py-4 bg-[#343a40] text-white text-sm font-semibold rounded-full hover:bg-[#212529] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 group"
@@ -44,7 +42,7 @@ export default function Home() {
                     arrow_forward
                   </span>
                 </Link>
-                
+
                 <Link
                   className="inline-flex items-center gap-3 text-[#343a40] hover:text-primary transition-colors group cursor-pointer"
                   href="#"
@@ -72,7 +70,7 @@ export default function Home() {
             {/* Right Content (Images with Reflections) */}
             <div className="relative flex justify-center items-center mt-12 lg:mt-0 perspective-1000">
               <div className="relative w-full max-w-[600px] mx-auto transform transition-transform duration-700 hover:scale-[1.02]">
-                
+
                 {/* Laptop container with reflection */}
                 <div className="relative z-10" style={{ WebkitBoxReflect: 'below 0px linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(0,0,0,0.15) 100%)' }}>
                   <img
@@ -92,7 +90,7 @@ export default function Home() {
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4C4Rr3q0US-vrMdwriYr23JVbB3ZqjzrJ4oOHi_szO7ayZEiflR7mcghlNOi5vLMnnc9mC14EOOc7UJaFVujvumZwkE0yBYuETlo2L8v4DiMwFeEmdFKFpdowhR-amla87s6me4or83opXpSF988rN_AI2WRSdtRCv0v6lSTbv_DJCpWCjgGXOOksuFz0Ukg3fw1l4tUJCG4eEtm0uIg-OlLMyOp17-BUtlcESbp0Tc8_on6uFNI"
                   />
                 </div>
-                
+
               </div>
             </div>
 
@@ -272,15 +270,15 @@ export default function Home() {
                 </span>
               </Link>
             </div>
-            
+
             <div className="lg:col-span-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Project 1 */}
                 <div className="group cursor-pointer">
                   <div className="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 bg-gray-100">
-                    <img 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vbcCs14uRRX8jdT6QT0M7VTJAwpvMPLoUjztwiEeg_i6xLnTU0go0gbIo-3KkXp_ZxqxZUyNj5iOtt48QzNQyyWw7N--Qjzgvg9bZQQPsoGaG9d7CYoFh2LGYpTwawERXl-aRl2flEeh0s8dLy0HVeuA2foU5inAFlg5YqjowmGLkPU-fYGv8UMM-DxzF50L6foA6uuTIf5h3cTvXbWOBc3fI3TOTwr0hKSQ40adeVZMof8yekGX" 
-                      alt="Finova" 
+                    <img
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vbcCs14uRRX8jdT6QT0M7VTJAwpvMPLoUjztwiEeg_i6xLnTU0go0gbIo-3KkXp_ZxqxZUyNj5iOtt48QzNQyyWw7N--Qjzgvg9bZQQPsoGaG9d7CYoFh2LGYpTwawERXl-aRl2flEeh0s8dLy0HVeuA2foU5inAFlg5YqjowmGLkPU-fYGv8UMM-DxzF50L6foA6uuTIf5h3cTvXbWOBc3fI3TOTwr0hKSQ40adeVZMof8yekGX"
+                      alt="Finova"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -297,9 +295,9 @@ export default function Home() {
                 {/* Project 2 */}
                 <div className="group cursor-pointer">
                   <div className="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 bg-gray-100">
-                    <img 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4C4Rr3q0US-vrMdwriYr23JVbB3ZqjzrJ4oOHi_szO7ayZEiflR7mcghlNOi5vLMnnc9mC14EOOc7UJaFVujvumZwkE0yBYuETlo2L8v4DiMwFeEmdFKFpdowhR-amla87s6me4or83opXpSF988rN_AI2WRSdtRCv0v6lSTbv_DJCpWCjgGXOOksuFz0Ukg3fw1l4tUJCG4eEtm0uIg-OlLMyOp17-BUtlcESbp0Tc8_on6uFNI" 
-                      alt="Nestly" 
+                    <img
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4C4Rr3q0US-vrMdwriYr23JVbB3ZqjzrJ4oOHi_szO7ayZEiflR7mcghlNOi5vLMnnc9mC14EOOc7UJaFVujvumZwkE0yBYuETlo2L8v4DiMwFeEmdFKFpdowhR-amla87s6me4or83opXpSF988rN_AI2WRSdtRCv0v6lSTbv_DJCpWCjgGXOOksuFz0Ukg3fw1l4tUJCG4eEtm0uIg-OlLMyOp17-BUtlcESbp0Tc8_on6uFNI"
+                      alt="Nestly"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -316,9 +314,9 @@ export default function Home() {
                 {/* Project 3 */}
                 <div className="group cursor-pointer">
                   <div className="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 bg-gray-100">
-                    <img 
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vbcCs14uRRX8jdT6QT0M7VTJAwpvMPLoUjztwiEeg_i6xLnTU0go0gbIo-3KkXp_ZxqxZUyNj5iOtt48QzNQyyWw7N--Qjzgvg9bZQQPsoGaG9d7CYoFh2LGYpTwawERXl-aRl2flEeh0s8dLy0HVeuA2foU5inAFlg5YqjowmGLkPU-fYGv8UMM-DxzF50L6foA6uuTIf5h3cTvXbWOBc3fI3TOTwr0hKSQ40adeVZMof8yekGX" 
-                      alt="Maxbot" 
+                    <img
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vbcCs14uRRX8jdT6QT0M7VTJAwpvMPLoUjztwiEeg_i6xLnTU0go0gbIo-3KkXp_ZxqxZUyNj5iOtt48QzNQyyWw7N--Qjzgvg9bZQQPsoGaG9d7CYoFh2LGYpTwawERXl-aRl2flEeh0s8dLy0HVeuA2foU5inAFlg5YqjowmGLkPU-fYGv8UMM-DxzF50L6foA6uuTIf5h3cTvXbWOBc3fI3TOTwr0hKSQ40adeVZMof8yekGX"
+                      alt="Maxbot"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -341,7 +339,7 @@ export default function Home() {
       {/* CTA & Stats Section */}
       <section className="py-12 pb-24 bg-background-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* CTA Banner */}
           <div className="bg-primary rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between mb-20 shadow-xl">
             <div className="flex items-center gap-6 mb-6 md:mb-0">
