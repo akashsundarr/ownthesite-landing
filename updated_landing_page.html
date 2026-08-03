@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OwnTheSite - Web Design &amp; Development Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a2f24",
+                        "primary-light": "#104737",
+                        "background-light": "#fcfcf8",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                        "text-light": "#1f2937",
+                        "text-dark": "#f8fafc",
+                        "text-muted-light": "#4b5563",
+                        "text-muted-dark": "#94a3b8",
+                        "accent": "#147055",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1.25rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .italic-accent {
+            font-style: italic;
+            color: #147055;
+            font-weight: 500;
+        }
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+        .float-anim-delayed {
+            animation: float 6s ease-in-out 2s infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center gap-2">
+
+<span class="font-bold text-xl tracking-tight text-primary dark:text-white">OwnTheSite</span>
+</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-sm font-semibold text-primary dark:text-white border-b-2 border-accent pb-1" href="#">Home</a>
+<a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-white transition-colors" href="#">Services</a>
+<a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-white transition-colors" href="#">Work</a>
+<a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-white transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<div class="hidden md:flex">
+<a class="inline-flex items-center justify-center px-6 py-2.5 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary-light transition-colors group" href="#">
+                        Let's Talk
+                        <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative pt-20 pb-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider mb-6">
+                        Web Design &amp; Development Agency
+                    </div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight mb-6">
+                        We build websites that help businesses <span class="italic-accent">grow online.</span>
+</h1>
+<p class="text-lg text-text-muted-light dark:text-text-muted-dark mb-8 max-w-lg">
+                        We design and develop modern websites, landing pages, portfolio sites, and e-commerce stores that turn visitors into customers.
+                    </p>
+<div class="flex flex-wrap items-center gap-4 mb-12">
+<a class="inline-flex items-center justify-center px-7 py-3.5 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary-light transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 group" href="#">
+                            View Our Work
+                            <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-7 py-3.5 bg-white dark:bg-surface-dark text-text-light dark:text-white border border-gray-200 dark:border-gray-700 text-sm font-medium rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group" href="#">
+                            Let's Talk
+                            <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+
+
+
+</div>
+
+</div>
+</div>
+<div class="relative lg:h-[600px] flex justify-center items-center">
+<div class="absolute top-10 right-10 float-anim">
+<span class="material-symbols-outlined text-4xl text-gray-300 dark:text-gray-600">magic_button</span>
+</div>
+<div class="absolute bottom-20 left-10 float-anim-delayed">
+<svg fill="none" height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 0C20 11.0457 11.0457 20 0 20C11.0457 20 20 28.9543 20 40C20 28.9543 28.9543 20 40 20C28.9543 20 20 11.0457 20 0Z" fill="#E5E7EB"></path>
+</svg>
+</div>
+
+<div class="relative w-full max-w-lg">
+<img alt="Laptop showing modern website design" class="w-full rounded-xl shadow-2xl relative z-10 border-4 border-gray-800 object-cover aspect-video" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vbcCs14uRRX8jdT6QT0M7VTJAwpvMPLoUjztwiEeg_i6xLnTU0go0gbIo-3KkXp_ZxqxZUyNj5iOtt48QzNQyyWw7N--Qjzgvg9bZQQPsoGaG9d7CYoFh2LGYpTwawERXl-aRl2flEeh0s8dLy0HVeuA2foU5inAFlg5YqjowmGLkPU-fYGv8UMM-DxzF50L6foA6uuTIf5h3cTvXbWOBc3fI3TOTwr0hKSQ40adeVZMof8yekGX">
+<img alt="Mobile showing website design" class="absolute -bottom-10 -right-10 w-1/3 rounded-[2rem] shadow-2xl z-20 border-8 border-gray-800 object-cover aspect-[9/19]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4C4Rr3q0US-vrMdwriYr23JVbB3ZqjzrJ4oOHi_szO7ayZEiflR7mcghlNOi5vLMnnc9mC14EOOc7UJaFVujvumZwkE0yBYuETlo2L8v4DiMwFeEmdFKFpdowhR-amla87s6me4or83opXpSF988rN_AI2WRSdtRCv0v6lSTbv_DJCpWCjgGXOOksuFz0Ukg3fw1l4tUJCG4eEtm0uIg-OlLMyOp17-BUtlcESbp0Tc8_on6uFNI">
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-7xl mx-auto bg-[#0a2f24] rounded-[2rem] p-10 md:p-20 text-white shadow-2xl relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Column -->
+            <div class="lg:col-span-5">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Why Choose OwnTheSite?</div>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Built for <span class="italic-accent text-[#b2efd6]">performance</span>.<br>Designed for <span class="italic-accent text-[#b2efd6]">impact</span>.</h2>
+            </div>
+            <!-- Right Column -->
+            <div class="lg:col-span-7">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12"><div class="group/item transition-all duration-300 hover:translate-x-1">
+                        <span class="material-symbols-outlined text-[#b2efd6] mb-4 opacity-80">draw</span>
+                        <h3 class="font-bold text-xl mb-2 text-[#faf9f6]">Modern Design</h3>
+                        <p class="text-[#faf9f6]/70 text-sm leading-relaxed">Clean, eye-catching designs that stand out.</p>
+                    </div>
+                    <div class="group/item transition-all duration-300 hover:translate-x-1">
+                        <span class="material-symbols-outlined text-[#b2efd6] mb-4 opacity-80">speed</span>
+                        <h3 class="font-bold text-xl mb-2 text-[#faf9f6]">Fast Performance</h3>
+                        <p class="text-[#faf9f6]/70 text-sm leading-relaxed">Optimized for speed and smoothness.</p>
+                    </div>
+                    <div class="group/item transition-all duration-300 hover:translate-x-1">
+                        <span class="material-symbols-outlined text-[#b2efd6] mb-4 opacity-80">devices</span>
+                        <h3 class="font-bold text-xl mb-2 text-[#faf9f6]">Mobile First</h3>
+                        <p class="text-[#faf9f6]/70 text-sm leading-relaxed">Perfect experience on every device.</p>
+                    </div>
+                    <div class="group/item transition-all duration-300 hover:translate-x-1">
+                        <span class="material-symbols-outlined text-[#b2efd6] mb-4 opacity-80">search_check</span>
+                        <h3 class="font-bold text-xl mb-2 text-[#faf9f6]">SEO Ready</h3>
+                        <p class="text-[#faf9f6]/70 text-sm leading-relaxed">Structured for better visibility and ranking.</p>
+                    </div>
+                    <div class="group/item transition-all duration-300 hover:translate-x-1">
+                        <span class="material-symbols-outlined text-[#b2efd6] mb-4 opacity-80">edit_note</span>
+                        <h3 class="font-bold text-xl mb-2 text-[#faf9f6]">Easy to Manage</h3>
+                        <p class="text-[#faf9f6]/70 text-sm leading-relaxed">User-friendly websites you can easily update.</p>
+                    </div>
+                    <div class="group/item transition-all duration-300 hover:translate-x-1">
+                        <span class="material-symbols-outlined text-[#b2efd6] mb-4 opacity-80">trending_up</span>
+                        <h3 class="font-bold text-xl mb-2 text-[#faf9f6]">Built to Convert</h3>
+                        <p class="text-[#faf9f6]/70 text-sm leading-relaxed">Strategic design that turns visitors into customers.</p>
+                    </div></div>
+            </div>
+        </div>
+    </div>
+</section><section class="py-24 bg-gray-50 dark:bg-gray-900/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<p class="text-sm font-bold text-accent uppercase tracking-widest mb-2">What We Do</p>
+<h2 class="text-3xl md:text-4xl font-bold">Services We Offer</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary dark:text-white">
+<span class="material-symbols-outlined">language</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Business Websites</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
+                        Professional websites that build trust and represent your brand perfectly.
+                    </p>
+<a class="text-primary dark:text-white opacity-50 group-hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary dark:text-white">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Landing Pages</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
+                        High-converting landing pages designed to generate leads and drive action.
+                    </p>
+<a class="text-primary dark:text-white opacity-50 group-hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary dark:text-white">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<h3 class="text-xl font-bold mb-3">E-commerce Stores</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
+                        Scalable e-commerce solutions that deliver smooth shopping experiences and sales.
+                    </p>
+<a class="text-primary dark:text-white opacity-50 group-hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 dark:border-gray-800 hover:-translate-y-1">
+<div class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary dark:text-white">
+<span class="material-symbols-outlined">person</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Portfolio Websites</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm leading-relaxed mb-6">
+                        Personal portfolio websites that showcase your work in the best way.
+                    </p>
+<a class="text-primary dark:text-white opacity-50 group-hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
