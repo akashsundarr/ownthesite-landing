@@ -22,14 +22,13 @@ export default function Home() {
             <div>
               
               <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.05] tracking-tight mb-6 text-[#1c232b]">
-                We Build<br />
-                Custom-Coded<br />
-                Digital Engines<br />
-                That Drive Real<br />
-                Growth.
+                We build<br />
+                websites that<br />
+                help businesses<br />
+                <span className="italic text-[#147055]">grow online.</span>
               </h1>
               <p className="text-lg text-text-muted-light mb-10 max-w-md leading-relaxed">
-                Our bespoke, high-performance websites and apps are engineered for conversion, scalability, and market dominance.
+                Custom websites and apps designed to help your business succeed.
               </p>
 
               <div className="flex flex-wrap items-center gap-6 mb-16">
@@ -184,7 +183,7 @@ export default function Home() {
             </p>
             <h2 className="text-3xl md:text-4xl font-bold">Services We Offer</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-surface-light  p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100  hover:-translate-y-1">
               <div className="w-12 h-12 bg-gray-100  rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary ">
                 <span className="material-symbols-outlined">language</span>
@@ -215,21 +214,7 @@ export default function Home() {
                 <span className="material-symbols-outlined">arrow_forward</span>
               </Link>
             </div>
-            <div className="bg-surface-light  p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100  hover:-translate-y-1">
-              <div className="w-12 h-12 bg-gray-100  rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary ">
-                <span className="material-symbols-outlined">shopping_cart</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">E-commerce Stores</h3>
-              <p className="text-text-muted-light  text-sm leading-relaxed mb-6">
-                Scalable e-commerce solutions that deliver smooth shopping experiences and sales.
-              </p>
-              <Link
-                className="text-primary  opacity-50 group-hover:opacity-100 transition-opacity"
-                href="#"
-              >
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </Link>
-            </div>
+
             <div className="bg-surface-light  p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100  hover:-translate-y-1">
               <div className="w-12 h-12 bg-gray-100  rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary ">
                 <span className="material-symbols-outlined">person</span>
@@ -249,88 +234,164 @@ export default function Home() {
         </div>
       </section>
       {/* Our Work Section */}
-      <section className="py-24 bg-background-light">
+      <section className="py-24 bg-[#F8F6F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
-            <div className="lg:col-span-4">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">Our Work</p>
-              <h2 className="text-5xl font-extrabold text-primary leading-tight mb-6">
-                We Build. They Grow.
+          <div className="flex flex-col lg:flex-row gap-16 items-start">
+            
+            {/* Left Column (Sticky) */}
+            <div className="lg:w-1/3 lg:sticky lg:top-32">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#1c232b] opacity-60 mb-6">Our Work</p>
+              <h2 className="text-5xl md:text-6xl font-extrabold text-[#1c232b] leading-[1.1] mb-6">
+                We Build.<br />Businesses Grow.
               </h2>
-              <p className="text-text-muted-light mb-8 text-lg">
-                From startups to established brands, we create digital products that make an impact.
+              <p className="text-lg text-[#1c232b] opacity-70 mb-10 leading-relaxed max-w-sm">
+                From educational institutions to landscaping, travel and engineering companies, we build digital experiences that convert visitors into customers.
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-primary text-primary font-bold text-sm uppercase tracking-wide hover:bg-primary hover:text-white transition-colors group"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-gray-300 text-[#1c232b] font-bold text-sm uppercase tracking-wide hover:bg-[#1c232b] hover:text-white transition-all duration-300 group"
               >
-                Explore All Projects
+                View All Projects
                 <span className="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">
                   arrow_forward
                 </span>
               </Link>
             </div>
 
-            <div className="lg:col-span-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Project 1 */}
-                <div className="group cursor-pointer">
-                  <div className="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 bg-gray-100">
-                    <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vbcCs14uRRX8jdT6QT0M7VTJAwpvMPLoUjztwiEeg_i6xLnTU0go0gbIo-3KkXp_ZxqxZUyNj5iOtt48QzNQyyWw7N--Qjzgvg9bZQQPsoGaG9d7CYoFh2LGYpTwawERXl-aRl2flEeh0s8dLy0HVeuA2foU5inAFlg5YqjowmGLkPU-fYGv8UMM-DxzF50L6foA6uuTIf5h3cTvXbWOBc3fI3TOTwr0hKSQ40adeVZMof8yekGX"
-                      alt="Finova"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="flex justify-between items-center px-2">
-                    <div>
-                      <h3 className="text-xl font-bold text-primary mb-1">Finova</h3>
-                      <p className="text-text-muted-light text-sm">Fintech Website</p>
+            {/* Right Column (Projects Stack) */}
+            <div className="lg:w-2/3 flex flex-col gap-16">
+              
+              {/* Project 1 */}
+              <Link href="https://www.shaheenflowers.ae/" target="_blank" className="group block w-full rounded-[2rem] bg-white p-4 md:p-6 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden mb-8 bg-gray-100 relative">
+                  <img
+                    src="/shaheen.png"
+                    alt="Shaheen Flowers"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="flex flex-col md:flex-row justify-between gap-6 px-2">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-3">
+                      <h3 className="text-2xl font-bold text-[#1c232b]">Shaheen Flowers</h3>
+                      <span className="px-3 py-1 bg-gray-100 text-[#1c232b] text-xs font-semibold rounded-full">2025</span>
                     </div>
-                    <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-primary group-hover:text-primary transition-colors">
-                      <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <p className="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-4">Landscaping & Plants</p>
+                    <p className="text-[#1c232b] opacity-70 mb-6 leading-relaxed max-w-lg">
+                      Professional landscaping company in the UAE offering garden design, annual maintenance contracts (AMC), indoor plants, outdoor landscaping, green walls, and irrigation solutions.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">Next.js</span>
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">React</span>
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">Tailwind CSS</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start md:items-end md:justify-end shrink-0">
+                    <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-[#1c232b] group-hover:bg-[#1c232b] group-hover:text-white transition-all duration-300">
+                      <span className="material-symbols-outlined transform group-hover:rotate-45 transition-transform duration-300">arrow_outward</span>
                     </div>
                   </div>
                 </div>
-                {/* Project 2 */}
-                <div className="group cursor-pointer">
-                  <div className="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 bg-gray-100">
-                    <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4C4Rr3q0US-vrMdwriYr23JVbB3ZqjzrJ4oOHi_szO7ayZEiflR7mcghlNOi5vLMnnc9mC14EOOc7UJaFVujvumZwkE0yBYuETlo2L8v4DiMwFeEmdFKFpdowhR-amla87s6me4or83opXpSF988rN_AI2WRSdtRCv0v6lSTbv_DJCpWCjgGXOOksuFz0Ukg3fw1l4tUJCG4eEtm0uIg-OlLMyOp17-BUtlcESbp0Tc8_on6uFNI"
-                      alt="Nestly"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="flex justify-between items-center px-2">
-                    <div>
-                      <h3 className="text-xl font-bold text-primary mb-1">Nestly</h3>
-                      <p className="text-text-muted-light text-sm">Real Estate Website</p>
+              </Link>
+
+              {/* Project 2 */}
+              <Link href="https://www.npskaloor.com/" target="_blank" className="group block w-full rounded-[2rem] bg-white p-4 md:p-6 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden mb-8 bg-gray-100 relative">
+                  <img
+                    src="/school.png"
+                    alt="National Public School Kaloor"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="flex flex-col md:flex-row justify-between gap-6 px-2">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-3">
+                      <h3 className="text-2xl font-bold text-[#1c232b]">National Public School Kaloor</h3>
+                      <span className="px-3 py-1 bg-gray-100 text-[#1c232b] text-xs font-semibold rounded-full">2025</span>
                     </div>
-                    <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-primary group-hover:text-primary transition-colors">
-                      <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <p className="text-sm font-semibold text-blue-700 uppercase tracking-wider mb-4">Education</p>
+                    <p className="text-[#1c232b] opacity-70 mb-6 leading-relaxed max-w-lg">
+                      Premium CBSE school website focused on admissions, academics, student life, facilities, and seamless communication with parents.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">Next.js</span>
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">React</span>
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">Tailwind CSS</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start md:items-end md:justify-end shrink-0">
+                    <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-[#1c232b] group-hover:bg-[#1c232b] group-hover:text-white transition-all duration-300">
+                      <span className="material-symbols-outlined transform group-hover:rotate-45 transition-transform duration-300">arrow_outward</span>
                     </div>
                   </div>
                 </div>
-                {/* Project 3 */}
-                <div className="group cursor-pointer">
-                  <div className="w-full aspect-square rounded-[2rem] overflow-hidden mb-6 bg-gray-100">
-                    <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vbcCs14uRRX8jdT6QT0M7VTJAwpvMPLoUjztwiEeg_i6xLnTU0go0gbIo-3KkXp_ZxqxZUyNj5iOtt48QzNQyyWw7N--Qjzgvg9bZQQPsoGaG9d7CYoFh2LGYpTwawERXl-aRl2flEeh0s8dLy0HVeuA2foU5inAFlg5YqjowmGLkPU-fYGv8UMM-DxzF50L6foA6uuTIf5h3cTvXbWOBc3fI3TOTwr0hKSQ40adeVZMof8yekGX"
-                      alt="Maxbot"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="flex justify-between items-center px-2">
-                    <div>
-                      <h3 className="text-xl font-bold text-primary mb-1">Maxbot</h3>
-                      <p className="text-text-muted-light text-sm">SaaS Platform</p>
+              </Link>
+
+              {/* Project 3 */}
+              <Link href="https://starwings-journey-redesign.vercel.app/" target="_blank" className="group block w-full rounded-[2rem] bg-white p-4 md:p-6 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden mb-8 bg-gray-100 relative">
+                  <img
+                    src="/travel.png"
+                    alt="Starwings Tours & Travels"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="flex flex-col md:flex-row justify-between gap-6 px-2">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-3">
+                      <h3 className="text-2xl font-bold text-[#1c232b]">Starwings Tours & Travels</h3>
+                      <span className="px-3 py-1 bg-gray-100 text-[#1c232b] text-xs font-semibold rounded-full">2024</span>
                     </div>
-                    <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-primary group-hover:text-primary transition-colors">
-                      <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <p className="text-sm font-semibold text-orange-700 uppercase tracking-wider mb-4">Travel & Tourism</p>
+                    <p className="text-[#1c232b] opacity-70 mb-6 leading-relaxed max-w-lg">
+                      Travel website showcasing vehicle rentals, customized tour packages, transparent pricing, and WhatsApp-first customer enquiries.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">Next.js</span>
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">React</span>
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">Tailwind CSS</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start md:items-end md:justify-end shrink-0">
+                    <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-[#1c232b] group-hover:bg-[#1c232b] group-hover:text-white transition-all duration-300">
+                      <span className="material-symbols-outlined transform group-hover:rotate-45 transition-transform duration-300">arrow_outward</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
+
+              {/* Project 4 */}
+              <Link href="https://starwings-website.vercel.app/" target="_blank" className="group block w-full rounded-[2rem] bg-white p-4 md:p-6 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                <div className="w-full aspect-[16/10] rounded-2xl overflow-hidden mb-8 bg-gray-100 relative">
+                  <img
+                    src="/ac.png"
+                    alt="StarWings HVAC Solutions"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="flex flex-col md:flex-row justify-between gap-6 px-2">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-3">
+                      <h3 className="text-2xl font-bold text-[#1c232b]">StarWings HVAC Solutions</h3>
+                      <span className="px-3 py-1 bg-gray-100 text-[#1c232b] text-xs font-semibold rounded-full">2023</span>
+                    </div>
+                    <p className="text-sm font-semibold text-slate-700 uppercase tracking-wider mb-4">Engineering</p>
+                    <p className="text-[#1c232b] opacity-70 mb-6 leading-relaxed max-w-lg">
+                      Corporate website presenting HVAC design, installation, maintenance services, and over 18 years of industry expertise.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">Next.js</span>
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">React</span>
+                      <span className="px-3 py-1 border border-gray-200 text-xs font-medium rounded-full text-gray-600">Tailwind CSS</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start md:items-end md:justify-end shrink-0">
+                    <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-[#1c232b] group-hover:bg-[#1c232b] group-hover:text-white transition-all duration-300">
+                      <span className="material-symbols-outlined transform group-hover:rotate-45 transition-transform duration-300">arrow_outward</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
