@@ -161,10 +161,10 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Our Work */}
       <PortfolioSection />
 
+      {/* What we do */}
       {/* What we do */}
       <section className="px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-7xl mx-auto bg-white/80 backdrop-blur-2xl border border-gray-200 rounded-[2rem] p-10 md:p-20 text-[#343a40] shadow-xl relative overflow-hidden">
@@ -172,73 +172,53 @@ export default function Home() {
             {/* Left Column */}
             <div className="lg:col-span-5">
               <div className="inline-block px-4 py-1.5 rounded-full bg-gray-100/50 backdrop-blur-md border border-gray-200/50 text-text-muted-light text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
-                What We Do
+                HOW WE HELP
               </div>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1c232b]">
-                Websites that
+                Your business,
                 <br />
-                <span className="italic-accent text-[#495057]">
-                  drive growth
-                </span>
-                .
+                <span className="italic-accent text-[#495057]">online.</span>
               </h2>
             </div>
 
             {/* Right Column */}
-            <div className="lg:col-span-7">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
-                <div className="group/item transition-all duration-300 hover:translate-x-1">
-                  <span className="material-symbols-outlined text-text-muted-light mb-4 opacity-80">
-                    language
+            <div className="lg:col-span-7 flex items-center">
+              <div className="max-w-2xl">
+                <p className="text-xl text-[#343a40] leading-8">
+                  Your customers are already searching online.
+                  <span className="font-semibold text-[#1c232b]">
+                    {" "}
+                    Let's make sure they find you.
                   </span>
+                </p>
 
-                  <h3 className="font-bold text-xl mb-2 text-[#1c232b]">
-                    Business Websites
-                  </h3>
+                <p className="mt-6 text-base text-[#6c757d] leading-8">
+                  Whether you run a restaurant, gym, clinic, salon, store, or
+                  any local business, we'll build a website that truly
+                  represents your brand and makes a great first impression.
+                </p>
 
-                  <p className="text-text-muted-light text-sm leading-relaxed">
-                    Professional websites that build credibility, showcase your
-                    brand, and convert visitors into customers.
-                  </p>
-                </div>
+                <p className="mt-6 text-base text-[#6c757d] leading-8">
+                  Share your ideas, tell us about your business, and we'll
+                  handle the rest—from design and development to launching a
+                  fast, mobile-friendly website that your customers will love to
+                  use.
+                </p>
 
-                <div className="group/item transition-all duration-300 hover:translate-x-1">
-                  <span className="material-symbols-outlined text-text-muted-light mb-4 opacity-80">
-                    rocket_launch
+                <p className="mt-6 text-base text-[#6c757d] leading-8">
+                  Because a good website doesn't just look beautiful.
+                  <span className="font-semibold text-[#1c232b]">
+                    {" "}
+                    It helps people trust your business, contact you, and become
+                    your next customer.
                   </span>
-
-                  <h3 className="font-bold text-xl mb-2 text-[#1c232b]">
-                    Landing Pages
-                  </h3>
-
-                  <p className="text-text-muted-light text-sm leading-relaxed">
-                    High-converting landing pages designed for campaigns, lead
-                    generation, and product launches.
-                  </p>
-                </div>
-
-                <div className="group/item transition-all duration-300 hover:translate-x-1">
-                  <span className="material-symbols-outlined text-text-muted-light mb-4 opacity-80">
-                    person
-                  </span>
-
-                  <h3 className="font-bold text-xl mb-2 text-[#1c232b]">
-                    Portfolio Websites
-                  </h3>
-
-                  <p className="text-text-muted-light text-sm leading-relaxed">
-                    Showcase your work, achievements, and expertise with a
-                    modern portfolio that leaves a lasting impression.
-                  </p>
-                </div>
-
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </main>
   );
 }
