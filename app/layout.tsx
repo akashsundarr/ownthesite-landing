@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import SplashScreen from "@/components/splash-screen";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} bg-background-light text-text-light transition-colors duration-300 antialiased`}
       >
+        <SplashScreen />
         <Navbar />
         {children}
       </body>
