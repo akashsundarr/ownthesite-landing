@@ -233,40 +233,12 @@ export default function Home() {
                   </p>
                 </div>
 
-
               </div>
-      </section>
-
-      {/* CTA & Stats Section */}
-      <section className="py-12 pb-24 bg-background-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* CTA Banner */}
-          <div className="bg-primary rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between mb-20 shadow-xl">
-            <div className="flex items-center gap-6 mb-6 md:mb-0">
-              <div className="w-16 h-16 rounded-full border border-[#6c757d] bg-[#343a40] flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-white text-2xl">
-                  rocket_launch
-                </span>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white">
-                Ready to Own Your Online Presence?
-              </h2>
             </div>
-            <Link
-              href="#"
-              className="shrink-0 inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold text-sm uppercase tracking-wide rounded-full hover:bg-gray-100 transition-colors group shadow-lg"
-            >
-              Let's Talk
-              <span className="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
-                north_east
-              </span>
-            </Link>
           </div>
-
-          {/* Stats */}
-          
         </div>
       </section>
+
     </main>
   );
 }
