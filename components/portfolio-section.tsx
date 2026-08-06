@@ -26,6 +26,37 @@ const projects = [
     image: "/school.png",
     link: "https://www.npskaloor.com/",
   },
+  
+  {
+    title: "Zamra Digital Experience",
+    year: "2025",
+    category: "Corporate",
+    description:
+      "Modern corporate website showcasing Zamra's services, company profile, projects, and premium digital brand presence with a clean user experience.",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+    image: "/zamra.png",
+    link: "https://zamrainternational.ownthesite.in/",
+  },
+  {
+    title: "Starline Constructions",
+    year: "2025",
+    category: "Construction",
+    description:
+      "Professional construction company website highlighting engineering expertise, completed projects, services, and client-focused business solutions.",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+    image: "/starline.png",
+    link: "https://www.starlineconstructions.com/",
+  },
+  {
+    title: "Salman Ali Portfolio",
+    year: "2025",
+    category: "Personal Portfolio",
+    description:
+      "Creative portfolio website showcasing projects, professional experience, featured videos, and a modern personal brand identity.",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+    image: "/salman.png",
+    link: "https://salman.ownthesite.in/",
+  },
   {
     title: "Starwings Tours & Travels",
     year: "2024",
