@@ -42,7 +42,6 @@ export default function Home() {
             {/* Right Content (Images with Reflections) */}
             <div className="relative flex justify-center items-center mt-12 lg:mt-0 perspective-1000">
               <div className="relative w-full max-w-[600px] mx-auto transform transition-transform duration-700 hover:scale-[1.02]">
-                {/* Laptop container with reflection */}
                 <div
                   className="relative z-10"
                   style={{
@@ -54,28 +53,15 @@ export default function Home() {
                     <Image
                       src="/pattern.png"
                       alt="Laptop showing modern website design"
-                      fill
-                      className="object-cover"
+                      width={1536}
+                      height={1024}
+                      className="w-full h-full object-cover"
+                      unoptimized
                       priority
                     />
                   </div>
                   {/* Laptop base stand */}
                   <div className="w-[110%] -ml-[5%] h-3 bg-gray-300 rounded-b-xl shadow-lg border-t border-gray-400 relative z-0"></div>
-                </div>
-
-                {/* Mobile container with reflection */}
-                <div
-                  className="absolute -bottom-12 -right-6 w-1/3 z-20"
-                  style={{
-                    WebkitBoxReflect:
-                      "below 2px linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.2) 100%)",
-                  }}
-                >
-                  <img
-                    alt="Mobile showing website design"
-                    className="w-full rounded-[2rem] shadow-2xl border-[6px] border-gray-800 object-cover aspect-[9/19] bg-white"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4C4Rr3q0US-vrMdwriYr23JVbB3ZqjzrJ4oOHi_szO7ayZEiflR7mcghlNOi5vLMnnc9mC14EOOc7UJaFVujvumZwkE0yBYuETlo2L8v4DiMwFeEmdFKFpdowhR-amla87s6me4or83opXpSF988rN_AI2WRSdtRCv0v6lSTbv_DJCpWCjgGXOOksuFz0Ukg3fw1l4tUJCG4eEtm0uIg-OlLMyOp17-BUtlcESbp0Tc8_on6uFNI"
-                  />
                 </div>
               </div>
             </div>
