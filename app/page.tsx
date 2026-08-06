@@ -155,79 +155,89 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="group/item transition-all duration-300 hover:translate-x-1"></div>
-
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-gray-50 ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-bold text-accent uppercase tracking-widest mb-2">
-              What We Do
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Services We Offer
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-surface-light  p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100  hover:-translate-y-1">
-              <div className="w-12 h-12 bg-gray-100  rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary ">
-                <span className="material-symbols-outlined">language</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Business Websites</h3>
-              <p className="text-text-muted-light  text-sm leading-relaxed mb-6">
-                Professional websites that build trust and represent your brand
-                perfectly.
-              </p>
-              <Link
-                className="text-primary  opacity-50 group-hover:opacity-100 transition-opacity"
-                href="#"
-              >
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </Link>
-            </div>
-            <div className="bg-surface-light  p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100  hover:-translate-y-1">
-              <div className="w-12 h-12 bg-gray-100  rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary ">
-                <span className="material-symbols-outlined">rocket_launch</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Landing Pages</h3>
-              <p className="text-text-muted-light  text-sm leading-relaxed mb-6">
-                High-converting landing pages designed to generate leads and
-                drive action.
-              </p>
-              <Link
-                className="text-primary  opacity-50 group-hover:opacity-100 transition-opacity"
-                href="#"
-              >
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </Link>
-            </div>
-
-            <div className="bg-surface-light  p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100  hover:-translate-y-1">
-              <div className="w-12 h-12 bg-gray-100  rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors text-primary ">
-                <span className="material-symbols-outlined">person</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Portfolio Websites</h3>
-              <p className="text-text-muted-light  text-sm leading-relaxed mb-6">
-                Personal portfolio websites that showcase your work in the best
-                way.
-              </p>
-              <Link
-                className="text-primary  opacity-50 group-hover:opacity-100 transition-opacity"
-                href="#"
-              >
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Work */}
-       <PortfolioSection />
+      <PortfolioSection />
+
+      {/* What we do */}
+      <section className="px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto bg-white/80 backdrop-blur-2xl border border-gray-200 rounded-[2rem] p-10 md:p-20 text-[#343a40] shadow-xl relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column */}
+            <div className="lg:col-span-5">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-gray-100/50 backdrop-blur-md border border-gray-200/50 text-text-muted-light text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
+                What We Do
+              </div>
+
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1c232b]">
+                Websites that
+                <br />
+                <span className="italic-accent text-[#495057]">
+                  drive growth
+                </span>
+                .
+              </h2>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:col-span-7">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
+                <div className="group/item transition-all duration-300 hover:translate-x-1">
+                  <span className="material-symbols-outlined text-text-muted-light mb-4 opacity-80">
+                    language
+                  </span>
+
+                  <h3 className="font-bold text-xl mb-2 text-[#1c232b]">
+                    Business Websites
+                  </h3>
+
+                  <p className="text-text-muted-light text-sm leading-relaxed">
+                    Professional websites that build credibility, showcase your
+                    brand, and convert visitors into customers.
+                  </p>
+                </div>
+
+                <div className="group/item transition-all duration-300 hover:translate-x-1">
+                  <span className="material-symbols-outlined text-text-muted-light mb-4 opacity-80">
+                    rocket_launch
+                  </span>
+
+                  <h3 className="font-bold text-xl mb-2 text-[#1c232b]">
+                    Landing Pages
+                  </h3>
+
+                  <p className="text-text-muted-light text-sm leading-relaxed">
+                    High-converting landing pages designed for campaigns, lead
+                    generation, and product launches.
+                  </p>
+                </div>
+
+                <div className="group/item transition-all duration-300 hover:translate-x-1">
+                  <span className="material-symbols-outlined text-text-muted-light mb-4 opacity-80">
+                    person
+                  </span>
+
+                  <h3 className="font-bold text-xl mb-2 text-[#1c232b]">
+                    Portfolio Websites
+                  </h3>
+
+                  <p className="text-text-muted-light text-sm leading-relaxed">
+                    Showcase your work, achievements, and expertise with a
+                    modern portfolio that leaves a lasting impression.
+                  </p>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA & Stats Section */}
       <section className="py-12 pb-24 bg-background-light">
@@ -256,50 +266,7 @@ export default function Home() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="material-symbols-outlined text-accent text-xl">
-                  star
-                </span>
-                <h3 className="text-4xl font-extrabold text-primary">50+</h3>
-              </div>
-              <p className="text-text-muted-light text-sm">
-                Projects Completed
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="material-symbols-outlined text-accent text-xl">
-                  sentiment_satisfied
-                </span>
-                <h3 className="text-4xl font-extrabold text-primary">30+</h3>
-              </div>
-              <p className="text-text-muted-light text-sm">Happy Clients</p>
-            </div>
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="material-symbols-outlined text-accent text-xl">
-                  verified
-                </span>
-                <h3 className="text-4xl font-extrabold text-primary">98%</h3>
-              </div>
-              <p className="text-text-muted-light text-sm">
-                Client Satisfaction
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="material-symbols-outlined text-accent text-xl">
-                  schedule
-                </span>
-                <h3 className="text-4xl font-extrabold text-primary">2+</h3>
-              </div>
-              <p className="text-text-muted-light text-sm">
-                Years of Experience
-              </p>
-            </div>
-          </div>
+          
         </div>
       </section>
     </main>
