@@ -1,4 +1,3 @@
-import PortfolioSection from "@/components/porfolio-section";
 import Link from "next/link";
 import React from "react";
 import PortfolioSection from "@/components/portfolio-section";
