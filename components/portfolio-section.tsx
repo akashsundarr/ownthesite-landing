@@ -54,7 +54,7 @@ const projects = [
     description:
       "Creative portfolio website showcasing projects, professional experience, featured videos, and a modern personal brand identity.",
     tech: ["Next.js", "React", "Tailwind CSS"],
-    image: "/salman.png",
+    image: "/salmanali.png",
     link: "https://salman.ownthesite.in/",
   },
   {

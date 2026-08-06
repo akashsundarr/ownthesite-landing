@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import PortfolioSection from "@/components/portfolio-section";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -49,11 +50,15 @@ export default function Home() {
                       "below 0px linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(0,0,0,0.15) 100%)",
                   }}
                 >
-                  <img
-                    alt="Laptop showing modern website design"
-                    className="w-full rounded-t-xl rounded-b-md shadow-2xl object-cover border-[6px] border-gray-800 bg-gray-800 aspect-video"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9vbcCs14uRRX8jdT6QT0M7VTJAwpvMPLoUjztwiEeg_i6xLnTU0go0gbIo-3KkXp_ZxqxZUyNj5iOtt48QzNQyyWw7N--Qjzgvg9bZQQPsoGaG9d7CYoFh2LGYpTwawERXl-aRl2flEeh0s8dLy0HVeuA2foU5inAFlg5YqjowmGLkPU-fYGv8UMM-DxzF50L6foA6uuTIf5h3cTvXbWOBc3fI3TOTwr0hKSQ40adeVZMof8yekGX"
-                  />
+                  <div className="relative w-full aspect-[3/2] rounded-t-xl rounded-b-md shadow-2xl border-[6px] border-gray-800 bg-gray-800 overflow-hidden">
+                    <Image
+                      src="/pattern.png"
+                      alt="Laptop showing modern website design"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
                   {/* Laptop base stand */}
                   <div className="w-[110%] -ml-[5%] h-3 bg-gray-300 rounded-b-xl shadow-lg border-t border-gray-400 relative z-0"></div>
                 </div>
