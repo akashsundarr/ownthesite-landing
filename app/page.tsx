@@ -40,7 +40,7 @@ export default function Home() {
             </div>
 
             {/* Right Content (Images with Reflections) */}
-            <div className="relative flex justify-center items-center mt-12 lg:mt-0 perspective-1000">
+            <div className="hidden md:flex relative justify-center items-center mt-12 lg:mt-0 perspective-1000">
               <div className="relative w-full max-w-[600px] mx-auto transform transition-transform duration-700 hover:scale-[1.02]">
                 <div
                   className="relative z-10"
@@ -49,7 +49,7 @@ export default function Home() {
                       "below 0px linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(0,0,0,0.15) 100%)",
                   }}
                 >
-                  <div className="relative w-full aspect-[3/2] rounded-t-xl rounded-b-md shadow-2xl border-[6px] border-gray-800 bg-gray-800 overflow-hidden">
+                  <div className="relative w-full aspect-[3/2] rounded-xl md:rounded-t-xl md:rounded-b-md shadow-2xl md:border-[6px] border-gray-800 md:bg-gray-800 overflow-hidden">
                     <Image
                       src="/pattern.png"
                       alt="Laptop showing modern website design"
@@ -61,7 +61,7 @@ export default function Home() {
                     />
                   </div>
                   {/* Laptop base stand */}
-                  <div className="w-[110%] -ml-[5%] h-3 bg-gray-300 rounded-b-xl shadow-lg border-t border-gray-400 relative z-0"></div>
+                  <div className="hidden md:block w-[110%] -ml-[5%] h-3 bg-gray-300 rounded-b-xl shadow-lg border-t border-gray-400 relative z-0"></div>
                 </div>
               </div>
             </div>

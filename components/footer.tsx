@@ -32,8 +32,7 @@ export default function Footer() {
                   </span>
                 </div>
                 <div className="flex flex-col justify-center min-h-[40px] gap-1">
-                  <a href="tel:+971507750967" className="hover:text-primary transition-colors">Mob: +971 507750967</a>
-                  <a href="tel:+971552039009" className="hover:text-primary transition-colors">+971 552039009</a>
+                  <a href="tel:7306063033" className="hover:text-primary transition-colors">Mob: 7306063033</a>
                 </div>
               </li>
               <li className="flex items-center gap-4 group">
@@ -42,8 +41,8 @@ export default function Footer() {
                     mail
                   </span>
                 </div>
-                <a href="mailto:hello@ownthesite.com" className="hover:text-primary transition-colors">
-                  hello@ownthesite.com
+                <a href="mailto:hello@ownthesite.in" className="hover:text-primary transition-colors">
+                  hello@ownthesite.in
                 </a>
               </li>
               <li className="flex items-center gap-4 group">
@@ -53,7 +52,7 @@ export default function Footer() {
                   </span>
                 </div>
                 <span className="cursor-default">
-                  Ajman & Dubai, UAE P.O. Box 13019
+                  Kochi, Kerala, India
                 </span>
               </li>
             </ul>
